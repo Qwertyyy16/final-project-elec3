@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random User Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div>
+                    <h1>👥 Random User Generator</h1>
+                    <p>Generate random people and build your contact list</p>
+                </div>
+                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <span class="sun-icon">☀️</span>
+                    <span class="moon-icon">🌙</span>
+                </button>
+            </div>
+        </header>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="userCount">Number of users:</label>
+                <select id="userCount" class="select">
+                    <option value="1">1</option>
+                    <option value="5">5</option>
+                    <option value="10" selected>10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" class="select">
+                    <option value="">All</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <button id="generateBtn" class="btn btn-primary">🎲 Generate Users</button>
+            <button id="clearBtn" class="btn btn-secondary">🗑️ Clear All</button>
+        </div>
+
+        <!-- View Toggle -->
+        <div class="view-toggle">
+            <button class="toggle-btn active" data-view="cards">📇 Card View</button>
+            <button class="toggle-btn" data-view="table">📊 Table View</button>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label">Total Contacts:</span>
+                <span class="stat-value" id="totalCount">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Male:</span>
+                <span class="stat-value" id="maleCount">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Female:</span>
+                <span class="stat-value" id="femaleCount">0</span>
+            </div>
+        </div>
+
+        <!-- Card View -->
+        <div id="cardsView" class="cards-container active-view">
+            <div class="info-message">Click "Generate Users" to create random contacts</div>
+        </div>
+
+        <!-- Table View -->
+        <div id="tableView" class="table-container">
+            <table id="usersTable">
+                <thead>
+                    <tr>
+                        <th>Photo</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Location</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td colspan="8" class="info-message">Click "Generate Users" to create random contacts</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <p>Random User Generator creates realistic user profiles using the Random User API. Perfect for testing and prototyping.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Features</h3>
+                    <ul>
+                        <li>Generate multiple users</li>
+                        <li>Filter by gender</li>
+                        <li>Card and table views</li>
+                        <li>Dark mode support</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>API</h3>
+                    <p>Powered by <a href="https://randomuser.me" target="_blank" rel="noopener">RandomUser.me</a></p>
+                    <p>Free and open-source API for generating random user data.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Random User Generator. Created for educational purposes.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

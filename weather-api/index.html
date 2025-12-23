@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Weather Dashboard</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<main class="app">
+		<section class="weather-container">
+			<header class="weather-header">
+				<div class="header-top">
+					<h1 class="title">Weather Dashboard</h1>
+					<label class="theme-toggle">
+						<input type="checkbox" id="themeToggle" />
+						<span class="toggle-slider">
+							<span class="toggle-icon">🌙</span>
+						</span>
+					</label>
+				</div>
+				<p class="subtitle">Get real-time weather information</p>
+			</header>
+
+			<form id="weatherForm" class="search-form" autocomplete="off">
+				<div class="search-box">
+					<input
+						id="city"
+						type="text"
+						class="search-input"
+						placeholder="Search city... e.g., London, Paris, Tokyo"
+						required
+					/>
+					<button type="submit" class="search-btn">
+						<span class="search-icon">🔍</span>
+						<span class="search-text">Search</span>
+					</button>
+				</div>
+				<div class="units-selector">
+					<label class="unit-label">
+						<input type="radio" name="units" value="metric" checked />
+						<span class="unit-text">°C / m/s</span>
+					</label>
+					<label class="unit-label">
+						<input type="radio" name="units" value="imperial" />
+						<span class="unit-text">°F / mph</span>
+					</label>
+				</div>
+			</form>
+
+			<section id="result" class="result" aria-live="polite" aria-atomic="true">
+				<div class="empty-state">
+					<div class="empty-icon">🌤️</div>
+					<p class="empty-text">Search for a city to see the current weather</p>
+				</div>
+			</section>
+		</section>
+	</main>
+
+	<script src="script.js"></script>
+</body>
+</html>

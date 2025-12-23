@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Calculator</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<main class="app">
+		<section class="calculator-container">
+			<div class="calculator-header">
+				<h1>Calculator</h1>
+				<p class="subtitle">Perform calculations with ease</p>
+			</div>
+			
+			<div class="calculator">
+				<div class="display">
+					<input id="display" type="text" readonly aria-label="Result" />
+				</div>
+				
+				<div class="keys-grid" role="grid" aria-label="Calculator keys">
+					<button data-key="C" class="key key--function key--clear">C</button>
+					<button data-key="DEL" class="key key--function">DEL</button>
+					<button data-key="/" class="key key--operator">÷</button>
+					<button data-key="*" class="key key--operator">×</button>
+
+					<button data-key="7" class="key">7</button>
+					<button data-key="8" class="key">8</button>
+					<button data-key="9" class="key">9</button>
+					<button data-key="-" class="key key--operator">−</button>
+
+					<button data-key="4" class="key">4</button>
+					<button data-key="5" class="key">5</button>
+					<button data-key="6" class="key">6</button>
+					<button data-key="+" class="key key--operator">+</button>
+
+					<button data-key="1" class="key">1</button>
+					<button data-key="2" class="key">2</button>
+					<button data-key="3" class="key">3</button>
+					<button data-key="=" class="key key--equals">=</button>
+
+					<button data-key="0" class="key key--zero">0</button>
+					<button data-key="." class="key">.</button>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<script src="script.js"></script>
+</body>
+</html>
